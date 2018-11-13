@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<style type="text/css">
+		body {
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+			margin: 0;
+			padding: 0;
+		}
+		
+		#page1bag {
+			position: relative;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+		}
+		
+		.mybox {
+			width: 100%;
+		}
+		
+		#page1bg {
+			position: absolute;
+			top: 2.23%;
+			left: 0;
+			width: 100%;
+			height: 97.77%;
+			overflow: hidden;
+		}
+		#start{
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+		}
+		#denglu {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				
+			}
+			
+			.mybox {
+				width: 100%;
+				height: 100%;
+			}
+			#guanbi {
+				position: absolute;
+				width: 3%;
+				height: 5%;
+				top: 36%;
+				left: 59%;
+			}
+			#ddenglu{
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+				display: none;
+			}
+			#dianji{
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+			}
+		
+		
+		
+	</style>
+
+	<body>
+		<div id="page1bag">
+			
+			<img class="mybox" src="img/indexbgstart.png" />
+			
+			<!--<div id="page1bg">
+				<img class="mybox" src="../images/logobg.png" />
+			</div>-->
+			<div id="start">
+				
+			</div>
+			<div id="ddenglu">
+				<div id="denglu">
+					<img id="mypng" class="mybox" src="img/endpage.png" />
+					<div id="guanbi">
+
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		$("#guanbi").click(function() {
+			$("#ddenglu").css("display", "none")
+		});
+		var myname = $.cookie('userId');
+		if(myname == null){
+			$('#start').click(function(){
+		$("#ddenglu").css("display", "block")
+		});
+				
+			}
+			else{
+				$('#start').click(function(){
+			window.location.href="html/page1.html";
+		});
+			}
+		
+	</script>
+
+</html>
